@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="user" method="upgrade">
+	<name>PLG_BFREDIRECT</name>
+	<creationDate>April 2020</creationDate>
+	<version>1.0.0</version>
+	<author>Jonathan Brain</author>
+	<authorEmail>brainforge.uk@btinternet.com</authorEmail>
+	<authorUrl>https://www.brainforge.co.uk</authorUrl>
+	<copyright>(C) 2020 Jonathan Brain. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_BFREDIRECT_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="bfredirect">bfredirect.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset
+					name="users"
+					label="PLG_BFREDIRECT_FSUSERS_LABEL"
+					description="PLG_BFREDIRECT_FSUSERS_DESC"
+			>
+				<field
+						name="users"
+						type="subform"
+						label=""
+						description=""
+						multiple="true"
+						layout="joomla.form.field.subform.repeatable-table"
+				>
+					<form>
+						<field
+								name="user"
+								type="user"
+								label="PLG_BFREDIRECT_USER_LABEL"
+						>
+						</field>
+						<field
+								name="menuitemid"
+								type="menuitem"
+								label="PLG_BFREDIRECT_MENUITEMID_LABEL"
+								cols="40"
+								rows="8"
+						>
+							<option	value="">JDEFAULT</option>
+						</field>
+					</form>
+				</field>
+			</fieldset>
+
+			<fieldset
+					name="groups"
+					label="PLG_BFREDIRECT_FSGROUPS_LABEL"
+					description="PLG_BFREDIRECT_FSGROUPS_DESC"
+			>
+				<field
+						name="groups"
+						type="subform"
+						label=""
+						description=""
+						multiple="true"
+						layout="joomla.form.field.subform.repeatable-table"
+				>
+					<form>
+						<field
+								name="group"
+								type="usergrouplist"
+								label="User Group"
+								multiple="true"
+						>
+						</field>
+						<field
+								name="menuitemid"
+								type="menuitem"
+								label="PLG_BFREDIRECT_MENUITEMID_LABEL"
+								cols="40"
+								rows="8"
+						>
+							<option	value="">JDEFAULT</option>
+						</field>
+					</form>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="PLG_BFREDIRECT">
+			https://brainforge.co.uk/component/bfupdater?element=plg_user_bfredirect.xml
+		</server>
+	</updateservers>
+</extension>
