@@ -2,7 +2,7 @@
 <extension version="3.1" type="plugin" group="user" method="upgrade">
 	<name>PLG_BFREDIRECT</name>
 	<creationDate>April 2020</creationDate>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<author>Jonathan Brain</author>
 	<authorEmail>brainforge.uk@btinternet.com</authorEmail>
 	<authorUrl>https://www.brainforge.co.uk</authorUrl>
@@ -69,6 +69,7 @@
 								type="usergrouplist"
 								label="User Group"
 								multiple="true"
+								layout="joomla.form.field.list-fancy-select"
 						>
 						</field>
 						<field
