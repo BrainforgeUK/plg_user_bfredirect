@@ -2,9 +2,11 @@
 /**
  * @package   Login redirection by BrainforgeUK
  * @author    https://www.brainforge.co.uk
- * @copyright (C) 2020 Jonathan Brain. All rights reserved.
+ * @copyright (C) 2020-2026 Jonathan Brain. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
+
+use Joomla\CMS\Router\Route;
 
 defined('_JEXEC') or die;
 
@@ -31,7 +33,7 @@ class PlgUserBfredirect extends JPlugin
 
 				if (!empty($menuitemid))
 				{
-					$link = JRoute::_('index.php?Itemid='.$menuitemid);
+					$link = Route::_('index.php?Itemid='.$menuitemid);
 					if (!empty($link))
 					{
 						JFactory::getApplication()->redirect(JRoute::_($link));
